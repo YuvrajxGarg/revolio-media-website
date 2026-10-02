@@ -38,3 +38,7 @@ The existing revolio.in website returned a 404 during research, so no inaccessib
 ## Hosting and privacy
 
 The registered Sites project is private for review. The existing revolio.in domain has not been changed. Fonts load through Google Fonts; campaign images are local. Instagram and YouTube content is linked rather than automatically embedded. No advertising or analytics code is installed.
+
+## Brand assets
+
+The supplied `download (4).png` is preserved byte-for-byte at `dist/assets/revolio-mark.png`. Header and footer display it on an opaque white badge with a subtle border. The SVG favicon embeds the same original PNG on a white tile, keeping the mark visible across browser themes.
