@@ -10,11 +10,11 @@ A dependency-free, responsive portfolio with 20 project stories, a filterable wo
 - `dist/experience.js`: project reel, wall/index views, filters, discovery, menu, reveals, and enquiry draft.
 - `dist/assets/`: actual project images extracted from the supplied PDF.
 
-After editing page content, run `python build.py`. Serve `dist/` with any static web server; for example, `python -m http.server 4173 --directory dist`. Open http://localhost:4173. Directory routes require an HTTP server, rather than opening index.html directly.
+After editing page content, run `python build.py`. Serve `dist/` with any static web server; for example, `python preview_server.py`. Open http://localhost:4173. Directory routes require an HTTP server, rather than opening index.html directly.
 
 ## Content provenance
 
-The main project source is the 43-page **Revolio Media Deck 2026.pdf** supplied from the Desktop. All pages were rendered and inspected. Some text was embedded in slide images and was read visually. Project imagery is extracted from the deck; no generated or stock campaign imagery is used.
+The main project source is the 43-page **Revolio Media Deck 2026.pdf** supplied from the Desktop. All pages were rendered and inspected. Some text was embedded in slide images and was read visually. Project imagery comes from the deck and verified original channel/film sources. No generated or stock campaign imagery is used.
 
 Additional public sources, reviewed 2 October 2026:
 
@@ -46,3 +46,19 @@ The supplied `download (4).png` is preserved byte-for-byte at `dist/assets/revol
 ## Complete redesign
 
 The current design uses a monochrome editorial base and a vermilion accent independent of the deck colors. The homepage has a keyboard-operable six-project reel, an irregular work wall, native details disclosures, and original-series/editorial sections. The portfolio has wall/index modes and category filters. Portrait and landscape project images are shown in their native proportions or with contain-fit, never cover-cropped. Original PDF image objects were recovered for 14 primary projects; galleries show complete frames. Motion respects reduced-motion preferences.
+
+## Screening room
+
+The current gallery adds all 45 user-supplied Instagram posts plus the previously selected District salon film: 46 entries. It includes 43 video entries (one is an 11-part silent animation carousel) and 3 complete photo carousels totaling 29 still frames. The full collection is filterable by client; four videos are selected for the homepage. `clips.json` stores labels and canonical post sources; media is self-hosted in `dist/media/`.
+
+Only visible videos load/play automatically, muted by default. Hover or keyboard focus requests sound for a single video; leaving, filtering, or hiding the page mutes it. Browser autoplay restrictions are respected, with per-video sound controls as fallback. Reduced-motion preferences disable automatic playback. Image and animation carousels retain all captured frames. No comments, follower lists, messages, account cookies, or signed CDN URLs are included in the website.
+
+Seven thumbnail replacements use original source assets: Sparx Venki Ramakrishnan, Mesa Bert Mueller/California Burrito, Barbershop Radhika Gupta, The Sports Women Smriti/Richa interview, official Zee Studios 12th Fail trailer, Trigon Film's All We Imagine As Light press still, and Netflix India's TEST trailer. Source URLs are stored on the corresponding project records as `image_source`.
+
+Full video durations, framing, and audio were verified before integration. Delivery encodes preserve source frame rates; one Simba source is natively 360p and is not falsely upscaled. Videos remain under the static host's 25 MiB per-file limit.
+
+## Playback and deployment
+
+Playback follows actual video-frame visibility, rechecked on scroll, resize, media readiness, and layout changes. At most four visible videos play at once. Manual pause is separate from automatic offscreen pause. Far-offscreen players release their sources and restore their position when revisited. Internal navigation cancels active media requests before loading the next page. The local preview server supports HTTP byte ranges (206 responses), matching production CDN streaming behavior.
+
+The GitHub repository is public at https://github.com/YuvrajxGarg/revolio-media-website. Vercel is the requested deployment destination. Render with `python build.py`, then commit the generated `dist/` alongside content changes. `vercel.json` serves `dist/` as static output. Local environment files and `.vercel/` are ignored and must never be committed.

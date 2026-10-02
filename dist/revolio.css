@@ -23,3 +23,8 @@
 @media(max-width:700px){.brand{gap:11px}.brand img{width:31px;height:39px}.brand-label strong{font-size:26px;letter-spacing:-1.2px;margin-bottom:5px}.brand-label small{font-size:7px;letter-spacing:1.15px}.footer .brand img{width:40px;height:50px}}
 
 .page-intro h1 em,.project-cta h2 em,.section-heading h2 em,.world-heading em,.contact-intro h1 em{letter-spacing:-.025em;word-spacing:.1em}.world-mast h1{letter-spacing:-.03em;word-spacing:.08em}.manifesto>.eyebrow,.world-section .section-heading .eyebrow{color:var(--red-dark)}.on-dark .page-intro .eyebrow,.work-section .section-heading .eyebrow{color:#ff725d}
+
+/* Tight optical leading between the sans and italic headline lines. */
+.hero-type h1 em{margin-top:-.23em}
+@media(max-width:700px){.hero-type h1 em{margin-top:-.20em}}
+.scene{grid-template-rows:minmax(0,1fr);grid-template-columns:minmax(0,1fr)}.scene img{min-width:0;min-height:0;max-width:100%;max-height:100%}.scene.duo{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}

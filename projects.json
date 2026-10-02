@@ -260,7 +260,7 @@
     "title": "More room for women in sport.",
     "name": "The Sports Women",
     "category": "Editorial",
-    "image": "the-sports-women-full-0",
+    "image": "sports-women-official",
     "services": "Content strategy · Production · Editorial",
     "intro": "An ongoing editorial platform spotlighting women athletes and sporting moments across India.",
     "paragraphs": [
@@ -276,11 +276,11 @@
     ],
     "pages": "26–28",
     "gallery": [
-      "the-sports-women-full-0",
-      "the-sports-women-full-1"
+      "sports-women-official"
     ],
     "width": 480,
-    "height": 360
+    "height": 270,
+    "image_source": "https://www.youtube.com/watch?v=gIbDLQuY0kk"
   },
   {
     "slug": "in-dyou-time",
@@ -398,7 +398,7 @@
     "title": "Building a podcast from day one.",
     "name": "Sparx by Mukesh Bansal",
     "category": "Archive",
-    "image": "sparx",
+    "image": "sparx-official",
     "services": "Brand · Content · End-to-end creative partnership",
     "intro": "An ongoing creative partnership for Mukesh Bansal’s productivity and motivation podcast.",
     "paragraphs": [
@@ -406,13 +406,19 @@
       "The partnership brings the different parts of a podcast’s presence together, from what an episode looks like to how its ideas travel beyond the full conversation."
     ],
     "insight": "A show becomes recognisable when its content and identity move together.",
-    "links": [],
+    "links": [
+      [
+        "Watch on the official channel",
+        "https://www.youtube.com/watch?v=fJe0e-Jt8Jg"
+      ]
+    ],
     "pages": "40",
     "gallery": [
-      "sparx"
+      "sparx-official"
     ],
-    "width": 540,
-    "height": 315
+    "width": 1280,
+    "height": 720,
+    "image_source": "https://www.youtube.com/watch?v=fJe0e-Jt8Jg"
   },
   {
     "slug": "mesa",
@@ -420,7 +426,7 @@
     "title": "Business school, beyond the brochure.",
     "name": "Mesa content IPs",
     "category": "Archive",
-    "image": "mesa",
+    "image": "mesa-official",
     "services": "Content strategy · Content IPs",
     "intro": "An inside view of campus life, pedagogy, and real-world startup experiences.",
     "paragraphs": [
@@ -428,13 +434,19 @@
       "The work connected the school’s digital presence to what actually happens there: how people learn, the ideas they test, and the startup experiences they encounter."
     ],
     "insight": "Show what an education feels like, as well as what it offers.",
-    "links": [],
+    "links": [
+      [
+        "Watch on the official channel",
+        "https://www.youtube.com/watch?v=_1ZAk1FRPAY"
+      ]
+    ],
     "pages": "41",
     "gallery": [
-      "mesa"
+      "mesa-official"
     ],
-    "width": 540,
-    "height": 315
+    "width": 1280,
+    "height": 720,
+    "image_source": "https://www.youtube.com/watch?v=_1ZAk1FRPAY"
   },
   {
     "slug": "barbershop",
@@ -442,7 +454,7 @@
     "title": "Entrepreneurship, in conversation.",
     "name": "The Barbershop with Shantanu",
     "category": "Archive",
-    "image": "barbershop",
+    "image": "barbershop-official",
     "services": "Podcast development · Content · Campaigns",
     "intro": "Revolio’s first entrepreneurial podcast, built from the beginning.",
     "paragraphs": [
@@ -450,13 +462,19 @@
       "The wider work included Razorpreneur, a pan-India campus challenge that took entrepreneurial participation beyond the podcast."
     ],
     "insight": "A conversation can become the starting point for a wider community.",
-    "links": [],
+    "links": [
+      [
+        "Watch on the official channel",
+        "https://www.youtube.com/watch?v=I8ia6BGvjjs"
+      ]
+    ],
     "pages": "41",
     "gallery": [
-      "barbershop"
+      "barbershop-official"
     ],
-    "width": 540,
-    "height": 300
+    "width": 1280,
+    "height": 720,
+    "image_source": "https://www.youtube.com/watch?v=I8ia6BGvjjs"
   },
   {
     "slug": "12th-fail",
@@ -464,7 +482,7 @@
     "title": "A film’s story, beyond the screen.",
     "name": "12th Fail release campaign",
     "category": "Archive",
-    "image": "12th-fail",
+    "image": "12th-fail-official",
     "services": "Creative strategy · Social media · Telegram marketing",
     "intro": "Social and Telegram marketing across the release cycle of Vidhu Vinod Chopra’s film.",
     "paragraphs": [
@@ -472,13 +490,19 @@
       "The work followed the film’s release cycle and key milestones, giving its story of grit and perseverance a presence beyond the cinema."
     ],
     "insight": "Release marketing is an ongoing conversation with an audience.",
-    "links": [],
+    "links": [
+      [
+        "Watch on the official channel",
+        "https://www.youtube.com/watch?v=KjbtuqENvVE"
+      ]
+    ],
     "pages": "42",
     "gallery": [
-      "12th-fail"
+      "12th-fail-official"
     ],
-    "width": 540,
-    "height": 310
+    "width": 1280,
+    "height": 720,
+    "image_source": "https://www.youtube.com/watch?v=KjbtuqENvVE"
   },
   {
     "slug": "all-we-imagine-as-light",
@@ -486,7 +510,7 @@
     "title": "A digital presence that listens to the film.",
     "name": "All We Imagine As Light",
     "category": "Archive",
-    "image": "awial",
+    "image": "awial-official",
     "services": "Platform-first film marketing",
     "intro": "A platform-first marketing approach for a film with a quiet, evocative voice.",
     "paragraphs": [
@@ -502,10 +526,11 @@
     ],
     "pages": "42",
     "gallery": [
-      "awial"
+      "awial-official"
     ],
-    "width": 540,
-    "height": 315
+    "width": 1800,
+    "height": 1080,
+    "image_source": "https://trigon-film.org/en/films/all-we-imagine-as-light/"
   },
   {
     "slug": "test",
@@ -513,7 +538,7 @@
     "title": "From set to screen to feed.",
     "name": "TEST",
     "category": "Archive",
-    "image": "test",
+    "image": "test-official",
     "services": "Marketing materials · On-set video assets",
     "intro": "Marketing material and on-set video assets for Netflix’s film TEST.",
     "paragraphs": [
@@ -521,12 +546,18 @@
       "The work extended the film’s world into material for its audience-facing campaign."
     ],
     "insight": "What happens around the film can give audiences another way into it.",
-    "links": [],
+    "links": [
+      [
+        "Watch on the official channel",
+        "https://www.youtube.com/watch?v=ryR2-jVjoeA"
+      ]
+    ],
     "pages": "43",
     "gallery": [
-      "test"
+      "test-official"
     ],
-    "width": 380,
-    "height": 245
+    "width": 1280,
+    "height": 720,
+    "image_source": "https://www.youtube.com/watch?v=ryR2-jVjoeA"
   }
 ]

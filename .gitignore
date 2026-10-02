@@ -2,3 +2,9 @@ __pycache__/
 .sites-runtime/
 *.tar.gz
 *.zip
+.vercel/
+.env
+.env.*
+
+.vercel
+.env*
