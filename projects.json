@@ -5,7 +5,7 @@
     "title": "Culture, with a point of view.",
     "name": "District Culture",
     "category": "Editorial",
-    "image": "district",
+    "image": "district-culture-full-0",
     "services": "Content strategy · Editorial · Distribution",
     "intro": "An editorial voice for a brand that lives where people go out, discover things, and talk about them afterwards.",
     "paragraphs": [
@@ -19,7 +19,12 @@
         "https://www.instagram.com/districtculture/"
       ]
     ],
-    "pages": "4–6"
+    "pages": "4–6",
+    "gallery": [
+      "district-culture-full-0"
+    ],
+    "width": 640,
+    "height": 1136
   },
   {
     "slug": "district-films",
@@ -27,7 +32,7 @@
     "title": "An announcement worth watching.",
     "name": "District launch films",
     "category": "Films",
-    "image": "district-film",
+    "image": "district-films-full-0",
     "services": "Content strategy · Production",
     "intro": "New launches, told through familiar stories instead of feature lists.",
     "paragraphs": [
@@ -45,7 +50,13 @@
         "https://www.instagram.com/reel/DP3rRnljCaI/"
       ]
     ],
-    "pages": "7"
+    "pages": "7",
+    "gallery": [
+      "district-films-full-0",
+      "district-films-full-1"
+    ],
+    "width": 504,
+    "height": 896
   },
   {
     "slug": "in-your-district",
@@ -53,7 +64,7 @@
     "title": "A city, through its kitchens.",
     "name": "In Your District",
     "category": "Editorial",
-    "image": "in-your-district",
+    "image": "in-your-district-full-0",
     "services": "Content strategy · Production · City storytelling",
     "intro": "Stories about the chefs, cuisines, restaurants, and people that give a city its flavour.",
     "paragraphs": [
@@ -75,7 +86,12 @@
         "https://www.instagram.com/reel/DVdA_mzStew/"
       ]
     ],
-    "pages": "8–9"
+    "pages": "8–9",
+    "gallery": [
+      "in-your-district-full-0"
+    ],
+    "width": 720,
+    "height": 900
   },
   {
     "slug": "rolling-loud",
@@ -83,7 +99,7 @@
     "title": "The festival beyond the stage.",
     "name": "Rolling Loud India",
     "category": "Live culture",
-    "image": "rolling-loud",
+    "image": "rolling-loud-full-0",
     "services": "Content strategy · On-ground production · Live edits",
     "intro": "Artist encounters, audience energy, and festival stories built for the moment and the days after.",
     "paragraphs": [
@@ -97,7 +113,12 @@
         "https://www.instagram.com/rollingloudindia/"
       ]
     ],
-    "pages": "10–12"
+    "pages": "10–12",
+    "gallery": [
+      "rolling-loud-full-0"
+    ],
+    "width": 648,
+    "height": 1152
   },
   {
     "slug": "only-fridays",
@@ -119,7 +140,13 @@
         "https://www.instagram.com/cred_club/"
       ]
     ],
-    "pages": "13–15"
+    "pages": "13–15",
+    "gallery": [
+      "cred",
+      "only-fridays-full-0"
+    ],
+    "width": 1300,
+    "height": 515
   },
   {
     "slug": "first-time-with-simba",
@@ -127,7 +154,7 @@
     "title": "First times. Full commitment.",
     "name": "First Time with Simba",
     "category": "Series",
-    "image": "simba",
+    "image": "first-time-with-simba-full-0",
     "services": "Concept · Visual identity · Direction · Distribution",
     "intro": "Joel D’Souza tries something completely new, with all the uncertainty that comes with it.",
     "paragraphs": [
@@ -141,7 +168,13 @@
         "https://www.youtube.com/@roarwithsimba007"
       ]
     ],
-    "pages": "16–18"
+    "pages": "16–18",
+    "gallery": [
+      "first-time-with-simba-full-0",
+      "first-time-with-simba-full-1"
+    ],
+    "width": 896,
+    "height": 504
   },
   {
     "slug": "plus91",
@@ -149,7 +182,7 @@
     "title": "NRI life. No instruction manual.",
     "name": "Plus91",
     "category": "Series",
-    "image": "plus91",
+    "image": "plus91-full-0",
     "services": "Visual identity · Content strategy · Production",
     "intro": "A playful studio format that makes an unfamiliar brand feel easy to step into.",
     "paragraphs": [
@@ -163,7 +196,13 @@
         "https://www.instagram.com/dialplus91/"
       ]
     ],
-    "pages": "19–21"
+    "pages": "19–21",
+    "gallery": [
+      "plus91-full-0",
+      "plus91-full-1"
+    ],
+    "width": 896,
+    "height": 504
   },
   {
     "slug": "journeys-of-aspiration",
@@ -171,7 +210,7 @@
     "title": "What it takes to make a home.",
     "name": "Journeys of Aspiration",
     "category": "Series",
-    "image": "aspora",
+    "image": "journeys-of-aspiration-full-0",
     "services": "Visual identity · Content strategy · International production",
     "intro": "Personal stories of building a life abroad, filmed across the UK and UAE.",
     "paragraphs": [
@@ -185,7 +224,13 @@
         "https://www.youtube.com/@get_aspora"
       ]
     ],
-    "pages": "22–23"
+    "pages": "22–23",
+    "gallery": [
+      "journeys-of-aspiration-full-0",
+      "journeys-of-aspiration-full-1"
+    ],
+    "width": 896,
+    "height": 504
   },
   {
     "slug": "superyou-pro",
@@ -193,7 +238,7 @@
     "title": "Make the unfamiliar feel familiar.",
     "name": "SuperYou Pro launch",
     "category": "Films",
-    "image": "superyou-film",
+    "image": "superyou-pro-full-0",
     "services": "Content strategy · Production",
     "intro": "A cinematic introduction to a new performance-product category, starting with creatine.",
     "paragraphs": [
@@ -202,7 +247,12 @@
     ],
     "insight": "Understanding comes more easily when the explanation earns your attention.",
     "links": [],
-    "pages": "24–25"
+    "pages": "24–25",
+    "gallery": [
+      "superyou-pro-full-0"
+    ],
+    "width": 864,
+    "height": 1536
   },
   {
     "slug": "the-sports-women",
@@ -210,7 +260,7 @@
     "title": "More room for women in sport.",
     "name": "The Sports Women",
     "category": "Editorial",
-    "image": "sports-women",
+    "image": "the-sports-women-full-0",
     "services": "Content strategy · Production · Editorial",
     "intro": "An ongoing editorial platform spotlighting women athletes and sporting moments across India.",
     "paragraphs": [
@@ -224,7 +274,13 @@
         "https://www.instagram.com/thesportswomenindia/"
       ]
     ],
-    "pages": "26–28"
+    "pages": "26–28",
+    "gallery": [
+      "the-sports-women-full-0",
+      "the-sports-women-full-1"
+    ],
+    "width": 480,
+    "height": 360
   },
   {
     "slug": "in-dyou-time",
@@ -232,7 +288,7 @@
     "title": "The business behind the bottle.",
     "name": "In d’you time",
     "category": "Series",
-    "image": "dyou",
+    "image": "in-dyou-time-full-0",
     "services": "Content strategy · Production · Documentary series",
     "intro": "A skincare brand lets the audience into the everyday work of building a company.",
     "paragraphs": [
@@ -246,7 +302,13 @@
         "https://www.instagram.com/indyoutime/"
       ]
     ],
-    "pages": "29–31"
+    "pages": "29–31",
+    "gallery": [
+      "in-dyou-time-full-0",
+      "in-dyou-time-full-1"
+    ],
+    "width": 960,
+    "height": 540
   },
   {
     "slug": "cosmix",
@@ -254,7 +316,7 @@
     "title": "A launch with a little play.",
     "name": "COSMIX launch content",
     "category": "Films",
-    "image": "cosmix",
+    "image": "cosmix-full-0",
     "services": "Content strategy · Production · Gamified formats",
     "intro": "Product-launch content in the brand’s own playful, transparent voice.",
     "paragraphs": [
@@ -268,7 +330,12 @@
         "https://www.instagram.com/cosmixwellness/"
       ]
     ],
-    "pages": "32–34"
+    "pages": "32–34",
+    "gallery": [
+      "cosmix-full-0"
+    ],
+    "width": 756,
+    "height": 1344
   },
   {
     "slug": "dumb-biryani",
@@ -276,7 +343,7 @@
     "title": "A show with a mind of its own.",
     "name": "Dumb Biryani",
     "category": "Originals",
-    "image": "dumb-biryani",
+    "image": "dumb-biryani-still",
     "services": "Original concept · Visual identity · Production · Experiential launch",
     "intro": "Arhaan Khan, Dev Raiyani, and Arush Verma turn the podcast format into an internet-first reality show.",
     "paragraphs": [
@@ -294,7 +361,14 @@
         "https://www.instagram.com/dumbbbiryani/"
       ]
     ],
-    "pages": "35–37"
+    "pages": "35–37",
+    "gallery": [
+      "dumb-biryani-still",
+      "dumb-biryani-full-0",
+      "dumb-biryani-full-1"
+    ],
+    "width": 1270,
+    "height": 726
   },
   {
     "slug": "hold-my-popcorn",
@@ -302,7 +376,7 @@
     "title": "One dialogue. One bucket. One mind reader.",
     "name": "Hold My Popcorn",
     "category": "Series",
-    "image": "prime-video",
+    "image": "hold-my-popcorn-full-0",
     "services": "Concept · Visual identity · Production",
     "intro": "Suhani Shah takes film knowledge and a little mind-reading to the street.",
     "paragraphs": [
@@ -311,7 +385,12 @@
     ],
     "insight": "A clear game makes room for spontaneous entertainment.",
     "links": [],
-    "pages": "38–39"
+    "pages": "38–39",
+    "gallery": [
+      "hold-my-popcorn-full-0"
+    ],
+    "width": 648,
+    "height": 1152
   },
   {
     "slug": "sparx",
@@ -328,7 +407,12 @@
     ],
     "insight": "A show becomes recognisable when its content and identity move together.",
     "links": [],
-    "pages": "40"
+    "pages": "40",
+    "gallery": [
+      "sparx"
+    ],
+    "width": 540,
+    "height": 315
   },
   {
     "slug": "mesa",
@@ -345,7 +429,12 @@
     ],
     "insight": "Show what an education feels like, as well as what it offers.",
     "links": [],
-    "pages": "41"
+    "pages": "41",
+    "gallery": [
+      "mesa"
+    ],
+    "width": 540,
+    "height": 315
   },
   {
     "slug": "barbershop",
@@ -362,7 +451,12 @@
     ],
     "insight": "A conversation can become the starting point for a wider community.",
     "links": [],
-    "pages": "41"
+    "pages": "41",
+    "gallery": [
+      "barbershop"
+    ],
+    "width": 540,
+    "height": 300
   },
   {
     "slug": "12th-fail",
@@ -379,7 +473,12 @@
     ],
     "insight": "Release marketing is an ongoing conversation with an audience.",
     "links": [],
-    "pages": "42"
+    "pages": "42",
+    "gallery": [
+      "12th-fail"
+    ],
+    "width": 540,
+    "height": 310
   },
   {
     "slug": "all-we-imagine-as-light",
@@ -401,7 +500,12 @@
         "https://www.instagram.com/allweimagineaslightfilm/reel/DCHI0rcyqK0/"
       ]
     ],
-    "pages": "42"
+    "pages": "42",
+    "gallery": [
+      "awial"
+    ],
+    "width": 540,
+    "height": 315
   },
   {
     "slug": "test",
@@ -418,6 +522,11 @@
     ],
     "insight": "What happens around the film can give audiences another way into it.",
     "links": [],
-    "pages": "43"
+    "pages": "43",
+    "gallery": [
+      "test"
+    ],
+    "width": 380,
+    "height": 245
   }
 ]

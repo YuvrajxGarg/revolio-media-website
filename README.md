@@ -5,9 +5,9 @@ A dependency-free, responsive portfolio with 20 project stories, a filterable wo
 ## Edit
 
 - `projects.json`: project copy, categories, images, and verified outbound links. The `pages` field maps each story to the supplied deck.
-- `build.py`: shared navigation, page layouts, home, magazine/originals, contact, and privacy copy.
-- `dist/style.css` and `dist/details.css`: visual system and responsive styles.
-- `dist/app.js`: menu, scroll reveals, filters, and enquiry draft.
+- `render.py`: shared navigation, page layouts, home, magazine/originals, contact, and privacy copy. `build.py` runs the renderer.
+- `dist/revolio.css`: visual system, responsive layouts, typography, native image proportions, and motion.
+- `dist/experience.js`: project reel, wall/index views, filters, discovery, menu, reveals, and enquiry draft.
 - `dist/assets/`: actual project images extracted from the supplied PDF.
 
 After editing page content, run `python build.py`. Serve `dist/` with any static web server; for example, `python -m http.server 4173 --directory dist`. Open http://localhost:4173. Directory routes require an HTTP server, rather than opening index.html directly.
@@ -41,4 +41,8 @@ The registered Sites project is private for review. The existing revolio.in doma
 
 ## Brand assets
 
-The supplied `download (4).png` is preserved byte-for-byte at `dist/assets/revolio-mark.png`. Header and footer display it on an opaque white badge with a subtle border. The SVG favicon embeds the same original PNG on a white tile, keeping the mark visible across browser themes.
+The supplied `download (4).png` is preserved byte-for-byte at `dist/assets/revolio-mark.png`. The mark has no background box. It is black on light and vermilion surfaces and inverted to white on dark sections. The transparent SVG favicon uses the same image and adapts to the browser color scheme.
+
+## Complete redesign
+
+The current design uses a monochrome editorial base and a vermilion accent independent of the deck colors. The homepage has a keyboard-operable six-project reel, an irregular work wall, native details disclosures, and original-series/editorial sections. The portfolio has wall/index modes and category filters. Portrait and landscape project images are shown in their native proportions or with contain-fit, never cover-cropped. Original PDF image objects were recovered for 14 primary projects; galleries show complete frames. Motion respects reduced-motion preferences.
