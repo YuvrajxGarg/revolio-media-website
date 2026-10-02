@@ -11,6 +11,11 @@ class Handler(SimpleHTTPRequestHandler):
         self.send_header('Accept-Ranges','bytes')
         self.send_header('Cache-Control','no-cache')
         super().end_headers()
+    def handle(self):
+        try:
+            super().handle()
+        except (BrokenPipeError,ConnectionResetError,ConnectionAbortedError):
+            pass
     def send_head(self):
         self.remaining=None
         path=self.translate_path(self.path)
@@ -49,7 +54,7 @@ class Handler(SimpleHTTPRequestHandler):
                 data=source.read(min(128*1024,remaining))
                 if not data:break
                 outputfile.write(data);remaining-=len(data)
-        except (BrokenPipeError,ConnectionResetError):pass
+        except (BrokenPipeError,ConnectionResetError,ConnectionAbortedError):pass
     def log_message(self,format,*args):pass
 
 if __name__=='__main__':
