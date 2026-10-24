@@ -62,3 +62,9 @@ Full video durations, framing, and audio were verified before integration. Deliv
 Playback follows actual video-frame visibility, rechecked on scroll, resize, media readiness, and layout changes. At most four visible videos play at once. Manual pause is separate from automatic offscreen pause. Far-offscreen players release their sources and restore their position when revisited. Internal navigation cancels active media requests before loading the next page. The local preview server supports HTTP byte ranges (206 responses), matching production CDN streaming behavior.
 
 The GitHub repository is public at https://github.com/YuvrajxGarg/revolio-media-website. Vercel is the requested deployment destination. Render with `python build.py`, then commit the generated `dist/` alongside content changes. `vercel.json` serves `dist/` as static output. Local environment files and `.vercel/` are ignored and must never be committed.
+
+## Sorting and client strip
+
+Each `clips.json` entry stores `published`, the original post's UTC publish time decoded from its Instagram shortcode. The screening room renders newest first and offers Latest / Oldest sorting; cards are laid into columns left to right so the order reads across rows.
+
+The homepage client strip uses monochrome logos in `dist/assets/clients/` (black on transparent PNG, listed in `CLIENTS` in `render.py`). Netflix, Prime Video, Coca-Cola, Sprite, adidas, Zomato and Swisse come from Wikimedia Commons; the others come from each brand's own website. Capri Sports pairs the Capri Global mark with a set wordmark; Sparx and The Barbershop with Shantanu are typeset wordmarks because neither publishes a standalone logo. The strip pauses on hover and becomes a static wrapped list under reduced-motion preferences.

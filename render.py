@@ -19,9 +19,11 @@ def page(path,title,description,body,active='',tone='',with_cta=True):
 def card(p,index=0):
  shape='portrait' if p['height']>p['width'] else 'landscape'
  return f'<a class="project-card {shape} reveal" data-category="{e(p["category"])}" href="/work/{p["slug"]}/"><div class="project-visual"><img src="/assets/{p["image"]}.webp" width="{p["width"]}" height="{p["height"]}" alt="{e(p["name"])} — full project image" loading="lazy"></div><div class="project-meta"><div><h3>{e(p["name"])}</h3><p>{e(p["client"])} / {e(p["category"])}</p></div><span class="project-num" aria-hidden="true">{index+1:02d}</span></div></a>'
+def month(stamp):
+ y,m=stamp[:7].split('-');return ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][int(m)-1]+' '+y
 def film_card(v):
  kind=v.get('type','video');ratio=f'{v["width"]}/{v["height"]}';name=e(v['title'])
- attrs=f'data-title="{name}" data-kind="{kind}" data-client="{e(v["client"])}" data-user-paused="false"'
+ attrs=f'data-title="{name}" data-kind="{kind}" data-client="{e(v["client"])}" data-published="{e(v.get("published",""))}" data-user-paused="false"'
  if kind=='image':
   slides=v['slides'];attrs+=' data-slides="'+e(json.dumps(slides))+'"'
   media=f'<img class="film-image" src="{e(slides[0]["image"])}" alt="{name} ? image 1" width="{slides[0]["width"]}" height="{slides[0]["height"]}" loading="lazy">'
@@ -34,17 +36,44 @@ def film_card(v):
   controls=f'<div class="film-controls"><button type="button" data-film-play aria-label="Play {name}">Play</button><button type="button" data-film-sound aria-pressed="false" aria-label="Toggle sound for {name}"'+(' disabled' if not audio else '')+'>'+('Sound on' if audio else 'Silent')+'</button></div>'
   if variants:controls+='<div class="variant-controls"><button data-variant-prev aria-label="Previous animation">Prev</button><span data-variant-count>1 / '+str(len(variants))+'</span><button data-variant-next aria-label="Next animation">Next</button></div>'
  project=f'<a href="{e(v["project"])}" class="text-link">The project</a>' if v.get('project') else ''
- return f'<article class="film-card" {attrs}><div class="film-screen" style="--frame-ratio:{ratio}">'+media+controls+f'</div><div class="film-meta"><p class="eyebrow">{e(v["client"])}</p><h3>{name}</h3><p>{e(v["caption"])}</p><div class="film-links">'+ext('Original post',v['source'])+project+'</div></div></article>'
+ return f'<article class="film-card" {attrs}><div class="film-screen" style="--frame-ratio:{ratio}">'+media+controls+f'</div><div class="film-meta"><p class="eyebrow">{e(v["client"])}'+(f'<time datetime="{e(v["published"][:10])}">{month(v["published"])}</time>' if v.get('published') else '')+f'</p><h3>{name}</h3><p>{e(v["caption"])}</p><div class="film-links">'+ext('Original post',v['source'])+project+'</div></div></article>'
 
 def video_gallery(homepage=False):
  if not V:return ''
  title='Better in <em>motion.</em>' if homepage else 'Less explaining.<br><em>More watching.</em>'
  tag='h2' if homepage else 'h1'
- collection=sorted([v for v in V if v.get('featured')],key=lambda v:v.get('featured_order',99)) if homepage else V
- clients=list(dict.fromkeys(['All']+[v['client'] for v in V]))
- filters='' if homepage else '<div class="watch-filters" role="group" aria-label="Filter the screening room">'+''.join('<button data-watch-filter="'+e(c)+'" aria-pressed="'+str(c=='All').lower()+'">'+e(c)+'</button>' for c in clients)+'</div><p class="watch-count" role="status" aria-live="polite">'+str(len(V))+' pieces</p>'
+ latest=sorted(V,key=lambda v:v.get('published',''),reverse=True)
+ collection=sorted([v for v in V if v.get('featured')],key=lambda v:v.get('featured_order',99)) if homepage else latest
+ clients=list(dict.fromkeys(['All']+[v['client'] for v in latest]))
+ sort='<div class="watch-sort" role="group" aria-label="Sort the screening room"><span>Sort</span>'+''.join(f'<button data-watch-sort="{k}" aria-pressed="{str(k=="latest").lower()}">{label}</button>' for k,label in [('latest','Latest'),('oldest','Oldest')])+'</div>'
+ filters='' if homepage else '<div class="watch-filters" role="group" aria-label="Filter the screening room">'+''.join('<button data-watch-filter="'+e(c)+'" aria-pressed="'+str(c=='All').lower()+'">'+e(c)+'</button>' for c in clients)+'</div><div class="watch-toolbar"><p class="watch-count" role="status" aria-live="polite">'+str(len(V))+' pieces</p>'+sort+'</div>'
  return '<section class="watch-section '+('home-watch' if homepage else '')+'"><div class="shell"><div class="watch-heading"><div><p class="eyebrow">The screening room</p><'+tag+'>'+title+'</'+tag+'></div></div>'+filters+'<div class="film-grid '+('featured-films' if homepage else '')+'">'+''.join(film_card(v) for v in collection)+'</div>'+('<a href="/watch/" class="text-link watch-more">Open the screening room <span class="plus" aria-hidden="true">+</span></a>' if homepage else '')+'</div></section>'
 
+CLIENTS=[
+ ('Netflix','netflix',30,443),
+ ('Prime Video','prime-video',36,381),
+ ('Coca-Cola','coca-cola',40,382),
+ ('Sprite','sprite',38,317),
+ ('adidas','adidas',44,178),
+ ('Mokobara','mokobara',22,813),
+ ('Zomato','zomato',30,568),
+ ('Blinkit','blinkit',30,453),
+ ('District by Zomato','district',42,297),
+ ('CRED','cred',48,101),
+ ('Foodstories','foodstories',50,109),
+ ('Capri Sports','capri-sports',30,706),
+ ('Mesa School of Business','mesa',38,352),
+ ('Firi','firi',36,206),
+ ('SuperYou','superyou',32,289),
+ ('Aspora','aspora',28,571),
+ ('Swisse','swisse',32,328),
+ ('Sparx by Mukesh Bansal','sparx',32,319),
+ ('The Barbershop with Shantanu','barbershop',40,615),
+ ('d’you','dyou',24,663),
+ ('Simba','simba',42,423)]
+def client_strip():
+ logos=''.join(f'<li><img src="/assets/clients/{f}.png" alt="{e(n)}" width="{round(w*h/120)}" height="{h}" style="--h:{h}px" loading="lazy" decoding="async"></li>' for n,f,h,w in CLIENTS)
+ return '<div class="client-marquee"><ul class="client-track" aria-label="Clients">'+logos+'</ul><ul class="client-track" aria-hidden="true">'+logos.replace(' alt="',' alt="" data-alt="')+'</ul></div>'
 def home():
  picks=['dumb-biryani','district-films','only-fridays','first-time-with-simba','in-dyou-time','test']
  scenes=''
@@ -56,8 +85,8 @@ def home():
  wall='<section class="work-section"><div class="shell"><div class="section-heading reveal"><div><p class="eyebrow">Out in the world</p><h2>Proof of<br><em>an imagination.</em></h2></div><p>Different worlds. Different rules. One question: why would someone want to watch?</p></div><div class="work-wall">'+''.join(card(by_slug[s],i) for i,s in enumerate(['district-films','test','only-fridays','in-dyou-time','the-sports-women','journeys-of-aspiration']))+'</div><div class="work-footer"><a href="/work/" class="text-link">There’s more where that came from <span class="plus" aria-hidden="true">+</span></a><button class="button" data-surprise>Surprise me</button></div></div></section>'
  studio='''<section class="manifesto shell" id="studio"><p class="eyebrow">A studio. A point of view.</p><div class="reveal"><h2>We’re interested in<br>what makes people<br><em>feel something.</em></h2><p>A laugh. A question. The urge to send it to someone. That’s where our work starts.</p><p>Revolio brings production, marketing, and storytelling into the same room. We build content worlds for brands—and a few of our own.</p></div></section><section class="method shell" aria-label="What we do"><details open><summary><span class="micro">01</span><h3>Find the thing worth saying.</h3></summary><p>Content strategy, cultural research, concepts, and show development. We find the point of view that gives a brand a reason to enter the conversation.</p></details><details><summary><span class="micro">02</span><h3>Give it a world to live in.</h3></summary><p>Visual identity, direction, production, and editing. From a studio set to the streets, the craft follows the idea and the people inside it.</p></details><details><summary><span class="micro">03</span><h3>Think past the first upload.</h3></summary><p>Editorial, social storytelling, and distribution. We shape formats that can grow across episodes, platforms, and the conversations they start.</p></details></section>'''
  worlds='''<section class="world-section"><div class="shell"><div class="section-heading"><div><p class="eyebrow">Not everything begins with a brief</p><h2 class="world-heading">Meanwhile,<br><em>in our heads.</em></h2></div><p>Our own questions become things you can read, watch, and get a little too invested in.</p></div><div class="world-panels"><article class="world-panel mag-panel reveal"><p class="eyebrow">Culture, with a point of view</p><h3>Revolio<br><em>Mag.</em></h3><p>Making dinner-table conversations more interesting.</p><a href="/world/#magazine" class="text-link">Read between the scrolls <span class="plus" aria-hidden="true">+</span></a></article><article class="world-panel db-panel reveal"><p class="eyebrow">A Revolio original</p><h3>Dumb Biryani.</h3><img class="db-still" src="/assets/dumb-biryani-full-0.webp" alt="Hello Brothers episode of Dumb Biryani, showing all guests" loading="lazy"><p>Three friends. A format with very few rules. A world that’s entirely its own.</p><a href="/work/dumb-biryani/" class="text-link">Get into it <span class="plus" aria-hidden="true">+</span></a></article></div></div></section>'''
- clients='<section class="client-section shell"><p class="eyebrow">Some of the company we keep</p><div class="client-names">'+''.join(f'<span>{x}</span>' for x in ['CRED','Netflix','District','Prime Video','Aspora','d’you','COSMIX','Capri','Zomato','SuperYou'])+'</div></section>'
- page('index.html','We make a scene','Revolio makes films, shows, editorial worlds, and original IPs. Independent creative thinking, with the credits to match.',hero+video_gallery(True)+wall+studio+worlds)
+ clients='<section class="client-section"><div class="shell"><p class="eyebrow">Some of the company we keep</p></div>'+client_strip()+'</section>'
+ page('index.html','We make a scene','Revolio makes films, shows, editorial worlds, and original IPs. Independent creative thinking, with the credits to match.',hero+clients+video_gallery(True)+wall+studio+worlds)
 home()
 
 def work():
