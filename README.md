@@ -49,7 +49,7 @@ The current design uses a monochrome editorial base and a vermilion accent indep
 
 ## Screening room
 
-The current gallery adds all 45 user-supplied Instagram posts plus the previously selected District salon film: 46 entries. It includes 43 video entries (one is an 11-part silent animation carousel) and 3 complete photo carousels totaling 29 still frames. The full collection is filterable by client; four videos are selected for the homepage. `clips.json` stores labels and canonical post sources; media is self-hosted in `dist/media/`.
+The current gallery adds all 46 user-supplied Instagram posts plus the previously selected District salon film: 47 entries. It includes 44 video entries (one is an 11-part silent animation carousel) and 3 complete photo carousels totaling 29 still frames. The full collection is filterable by client; four videos are selected for the homepage. `clips.json` stores labels and canonical post sources; media is self-hosted in `dist/media/`.
 
 Only visible videos load/play automatically, muted by default. Hover or keyboard focus requests sound for a single video; leaving, filtering, or hiding the page mutes it. Browser autoplay restrictions are respected, with per-video sound controls as fallback. Reduced-motion preferences disable automatic playback. Image and animation carousels retain all captured frames. No comments, follower lists, messages, account cookies, or signed CDN URLs are included in the website.
 

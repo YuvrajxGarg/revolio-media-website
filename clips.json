@@ -1,5 +1,22 @@
 [
   {
+    "id": "De35veHzBLg",
+    "source": "https://www.instagram.com/p/De35veHzBLg/",
+    "title": "Winner takes it all.",
+    "client": "Mokobara",
+    "caption": "The 24K Mokogram Collection: three cheaters, one card table.",
+    "project": null,
+    "type": "video",
+    "width": 960,
+    "height": 540,
+    "featured": true,
+    "video": "/media/De35veHzBLg.mp4",
+    "poster": "/media/De35veHzBLg.jpg",
+    "duration": 63.72,
+    "has_audio": true,
+    "featured_order": 1
+  },
+  {
     "id": "district-salon",
     "type": "video",
     "title": "A haircut can change your life.",
@@ -299,12 +316,12 @@
     "type": "video",
     "width": 540,
     "height": 960,
-    "featured": true,
+    "featured": false,
     "video": "/media/DcV77a6T7Y3.mp4",
     "poster": "/media/DcV77a6T7Y3.jpg",
     "duration": 45.2,
     "has_audio": true,
-    "featured_order": 4
+    "featured_order": 99
   },
   {
     "id": "DcFt1ZIEWRh",
@@ -523,7 +540,7 @@
     "poster": "/media/DV2mKbaCC_4.jpg",
     "duration": 72.76,
     "has_audio": true,
-    "featured_order": 3
+    "featured_order": 4
   },
   {
     "id": "DViTQm6DGQU",
@@ -659,7 +676,7 @@
     "poster": "/media/DRzUHAPDEvh.jpg",
     "duration": 66.133333,
     "has_audio": true,
-    "featured_order": 2
+    "featured_order": 3
   },
   {
     "id": "DRuRaXME62Y",
@@ -829,7 +846,7 @@
     "poster": "/media/DKKMwncPeI0.jpg",
     "duration": 30.0,
     "has_audio": true,
-    "featured_order": 1
+    "featured_order": 2
   },
   {
     "id": "DKYiX4NTRan",
